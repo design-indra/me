@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Portfolio | Muhamad Holis</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;800&display=swap" rel="stylesheet">
+
+<style>
+:root {
+    --primary: #6366f1;
+    --dark: #1e293b;
+    --slate: #64748b;
+    --light: #f8fafc;
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+body {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    background: #f0f2f5;
+    display: flex;
+    justify-content: center;
+    padding: 40px 20px;
+}
+
+.bg-circle {
+    position: fixed;
+    width: 400px;
+    height: 400px;
+    background: linear-gradient(135deg, #6366f1, #a855f7);
+    border-radius: 50%;
+    filter: blur(100px);
+    opacity: 0.1;
+    z-index: -1;
+    top: -100px;
+    right: -100px;
+}
+
+.card {
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(10px);
+    max-width: 700px;
+    width: 100%;
+    border-radius: 28px;
+    padding: 40px;
+    box-shadow: 20px 20px 60px #d1d9e6, -20px -20px 60px #ffffff;
+    text-align: center;
+}
+
+.thumb-box {
+    width: 110px;
+    height: 110px;
+    margin: 0 auto 20px;
+    border-radius: 24px;
+    padding: 8px;
+    background: #f0f2f5;
+    box-shadow: inset 6px 6px 12px #d1d9e6, inset -6px -6px 12px #ffffff;
+}
+
+.profile-img {
+    width: 100%;
+    height: 100%;
+    border-radius: 18px;
+    object-fit: cover;
+}
+
+h1 { font-size: 26px; font-weight: 800; color: var(--dark); }
+
+.badge {
+    display: inline-block;
+    padding: 6px 14px;
+    background: #eef2ff;
+    color: var(--primary);
+    border-radius: 100px;
+    font-size: 12px;
+    font-weight: 700;
+    margin: 12px 0 20px;
+}
+
+.bio {
+    font-size: 14px;
+    color: var(--slate);
+    line-height: 1.6;
+    margin-bottom: 30px;
+}
+
+/* GRID LINK */
+.grid-links {
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    gap: 15px;
+    margin-bottom: 35px;
+}
+.link-item {
+    background: var(--light);
+    padding: 20px;
+    border-radius: 18px;
+    text-decoration: none;
+    transition: .3s;
+    border: 1px solid #e2e8f0;
+}
+
+.link-item:hover {
+    transform: translateY(-5px);
+    border-color: var(--primary);
+}
+
+.link-item span { font-size: 22px; }
+.link-item strong { display:block; font-size:13px; color:var(--dark); margin-top:5px; }
+.link-item small { font-size:11px; color:#94a3b8; }
+
+/* SECTION */
+.section {
+    margin-top: 40px;
+    text-align: left;
+}
+
+.section-title {
+    font-size: 16px;
+    font-weight: 700;
+    margin-bottom: 15px;
+    color: var(--dark);
+}
+
+/* INFO CARD */
+.info-card {
+    background: var(--light);
+    padding: 18px;
+    border-radius: 16px;
+    margin-bottom: 15px;
+    border: 1px solid #e2e8f0;
+}
+
+.info-card h3 {
+    font-size: 14px;
+    margin-bottom: 8px;
+}
+
+.info-card p {
+    font-size: 13px;
+    color: var(--slate);
+    margin-bottom: 10px;
+}
+
+/* TAG */
+.tag-group { display: flex; flex-wrap: wrap; gap: 6px; }
+
+.tag {
+    font-size: 10px;
+    background: #eef2ff;
+    color: var(--primary);
+    padding: 4px 8px;
+    border-radius: 100px;
+}
+
+/* SKILLS */
+.skills-grid {
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    gap: 15px;
+}
+
+.skill-box {
+    background: var(--light);
+    padding: 15px;
+    border-radius: 16px;
+    border: 1px solid #e2e8f0;
+}
+
+.skill-box strong {
+    font-size: 13px;
+    display:block;
+    margin-bottom: 5px;
+}
+
+.skill-box span {
+    font-size: 12px;
+    color: var(--slate);
+}
+
+/* BUTTON */
+.btn {
+    display: inline-block;
+    padding: 12px 18px;
+    border-radius: 14px;
+    text-decoration: none;
+    font-size: 13px;
+    font-weight: 600;
+    margin-right: 10px;
+    transition: .3s;
+}
+
+.btn-dark {
+    background: var(--dark);
+    color: white;
+}
+
+.btn-dark:hover { background: var(--primary); }
+
+.btn-outline {
+    border: 1px solid var(--primary);
+    color: var(--primary);
+}
+
+.btn-outline:hover {
+    background: var(--primary);
+    color: white;
+}
+
+.cta-group {
+    margin-top: 15px;
+}
+
+/* DISCLAIMER */
+.disclaimer {
+    margin-top: 40px;
+    font-size: 11px;
+    color: #94a3b8;
+    border-top: 1px solid #e2e8f0;
+    padding-top: 20px;
+    text-align: center;
+}
+
+/* RESPONSIVE */
+@media(max-width:600px){
+    .grid-links,
+    .skills-grid {
+        grid-template-columns: 1fr;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<div class="bg-circle"></div>
+
+<div class="card">
+
+<div class="thumb-box">
+    <img src="https://i.ibb.co.com/2YcsPyJ6/profile.jpg" alt="Muhamad Holis" class="profile-img">
+</div>
+
+<h1>Muhamad Holis</h1>
+<span class="badge">Fullstack Developer | Author | Marketing Strategy</span>
+    <p class="bio">Turning complex problems into elegant mobile solutions.</p>
+
+<div class="grid-links">
+    <a href="https://lynk.id/konten_digital/5vdedrw4g86m" class="link-item"><span>📖</span><strong>E-Book</strong><small>10 Trik Jualan</small></a>
+    <a href="https://open.spotify.com/artist/4BVmivSLp28WDmI03ettVV?si=bQUfvBy_TR6fRoh8s6a3zQ" class="link-item"><span>🎵</span><strong>Music</strong><small>Dengarkan di Spotify</small></a>
+    <a href="https://islamicdigitalapp.blogspot.com/2026/02/aplikasi-alquran-mobile-pro-gratis.html?m=1" class="link-item"><span>💻</span><strong>Apps</strong><small>Portfolio Dev</small></a>
+    <a href="https://design-indra.github.io/portofolio/" class="link-item"><span>📈</span><strong>Sales</strong><small>Marketing Strategy</small></a>
+   
+
+<div class="section">
+<div class="section-title">Karya Kreatif & Produk</div>
+
+<div class="info-card">
+<h3>📖 E-Book: Strategi Jualan Online</h3>
+<p>Mengupas rahasia 10 trik jualan online yang mudah diterapkan untuk meningkatkan omzet secara signifikan.</p>
+<div class="tag-group">
+<span class="tag">Marketing</span>
+<span class="tag">Sales Trick</span>
+<span class="tag">Digital Business</span>
+</div>
+</div>
+
+<div class="info-card">
+<h3>🎵 Single Lagu: "Selalu Ada"</h3>
+<p>Karya musik orisinal dengan lirik emosional dan aransemen menyentuh sisi humanis pendengar.</p>
+<div class="tag-group">
+<span class="tag">Songwriting</span>
+<span class="tag">Creative Arts</span>
+<span class="tag">Music Production</span>
+</div>
+</div>
+</div>
+
+<div class="section">
+<div class="section-title">Keahlian Pemrograman</div>
+<div class="skills-grid">
+<div class="skill-box"><strong>Mobile Development</strong><span>Android, iOS, Flutter</span></div>
+<div class="skill-box"><strong>Backend & API</strong><span>Node.js, Firebase, REST API</span></div>
+<div class="skill-box"><strong>Marketing Tech</strong><span>SEO, Ads, Funnel Strategy</span></div>
+<div class="skill-box"><strong>Software Engineering</strong><span>Clean & Scalable Architecture</span></div>
+</div>
+</div>
+
+<div class="section">
+<div class="section-title">Hubungi Saya</div>
+<p style="font-size:14px; color:var(--slate);">
+Tersedia untuk proyek inovatif, pengembangan aplikasi custom, atau konsultasi strategi marketing.
+</p>
+<div class="cta-group">
+<a href="https://wa.me/6283803888990" class="btn btn-dark">Chat via WhatsApp</a>
+<a href="mailto:mholis1991holis@gmail.com" class="btn btn-outline">Kirim Email Bisnis</a>
+</div>
+</div>
+<div class="disclaimer">
+<strong>Disclaimer:</strong> Profil ini adalah portofolio resmi Muhamad Holis. Hak cipta buku, lagu, dan kode aplikasi dilindungi.
+</div>
+
+</div>
+
+</body>
+</html>
