@@ -6,6 +6,7 @@
 <title>Portfolio | Muhamad Holis</title>
 
 <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 
 <style>
 :root {
@@ -86,7 +87,6 @@ h1 { font-size: 26px; font-weight: 800; color: var(--dark); }
     margin-bottom: 30px;
 }
 
-/* GRID LINK */
 .grid-links {
     display: grid;
     grid-template-columns: repeat(2,1fr);
@@ -111,7 +111,6 @@ h1 { font-size: 26px; font-weight: 800; color: var(--dark); }
 .link-item strong { display:block; font-size:13px; color:var(--dark); margin-top:5px; }
 .link-item small { font-size:11px; color:#94a3b8; }
 
-/* SECTION */
 .section {
     margin-top: 40px;
     text-align: left;
@@ -124,7 +123,6 @@ h1 { font-size: 26px; font-weight: 800; color: var(--dark); }
     color: var(--dark);
 }
 
-/* INFO CARD */
 .info-card {
     background: var(--light);
     padding: 18px;
@@ -133,20 +131,10 @@ h1 { font-size: 26px; font-weight: 800; color: var(--dark); }
     border: 1px solid #e2e8f0;
 }
 
-.info-card h3 {
-    font-size: 14px;
-    margin-bottom: 8px;
-}
+.info-card h3 { font-size: 14px; margin-bottom: 8px; }
+.info-card p { font-size: 13px; color: var(--slate); margin-bottom: 10px; }
 
-.info-card p {
-    font-size: 13px;
-    color: var(--slate);
-    margin-bottom: 10px;
-}
-
-/* TAG */
 .tag-group { display: flex; flex-wrap: wrap; gap: 6px; }
-
 .tag {
     font-size: 10px;
     background: #eef2ff;
@@ -155,7 +143,6 @@ h1 { font-size: 26px; font-weight: 800; color: var(--dark); }
     border-radius: 100px;
 }
 
-/* SKILLS */
 .skills-grid {
     display: grid;
     grid-template-columns: repeat(2,1fr);
@@ -169,18 +156,9 @@ h1 { font-size: 26px; font-weight: 800; color: var(--dark); }
     border: 1px solid #e2e8f0;
 }
 
-.skill-box strong {
-    font-size: 13px;
-    display:block;
-    margin-bottom: 5px;
-}
+.skill-box strong { font-size: 13px; display:block; margin-bottom: 5px; }
+.skill-box span { font-size: 12px; color: var(--slate); }
 
-.skill-box span {
-    font-size: 12px;
-    color: var(--slate);
-}
-
-/* BUTTON */
 .btn {
     display: inline-block;
     padding: 12px 18px;
@@ -192,28 +170,12 @@ h1 { font-size: 26px; font-weight: 800; color: var(--dark); }
     transition: .3s;
 }
 
-.btn-dark {
-    background: var(--dark);
-    color: white;
-}
-
+.btn-dark { background: var(--dark); color: white; }
 .btn-dark:hover { background: var(--primary); }
+.btn-outline { border: 1px solid var(--primary); color: var(--primary); }
+.btn-outline:hover { background: var(--primary); color: white; }
+.cta-group { margin-top: 15px; }
 
-.btn-outline {
-    border: 1px solid var(--primary);
-    color: var(--primary);
-}
-
-.btn-outline:hover {
-    background: var(--primary);
-    color: white;
-}
-
-.cta-group {
-    margin-top: 15px;
-}
-
-/* DISCLAIMER */
 .disclaimer {
     margin-top: 40px;
     font-size: 11px;
@@ -223,10 +185,67 @@ h1 { font-size: 26px; font-weight: 800; color: var(--dark); }
     text-align: center;
 }
 
-/* RESPONSIVE */
+/* ===== PROJECTS SECTION ===== */
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 12px;
+}
+
+.project-card {
+    background: var(--light);
+    border: 1px solid #e2e8f0;
+    border-radius: 18px;
+    padding: 14px;
+    text-decoration: none;
+    transition: .3s;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.project-card:hover {
+    transform: translateY(-4px);
+    border-color: var(--primary);
+    box-shadow: 0 8px 24px rgba(99,102,241,0.12);
+}
+
+.project-icon {
+    width: 44px;
+    height: 44px;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 18px;
+    flex-shrink: 0;
+}
+
+.project-info strong {
+    display: block;
+    font-size: 13px;
+    color: var(--dark);
+    margin-bottom: 2px;
+}
+
+.project-info small { font-size: 11px; color: #94a3b8; }
+
+.projects-count {
+    display: inline-block;
+    background: linear-gradient(135deg, #6366f1, #a855f7);
+    color: white;
+    font-size: 11px;
+    font-weight: 700;
+    padding: 4px 10px;
+    border-radius: 100px;
+    margin-left: 8px;
+    vertical-align: middle;
+}
+
 @media(max-width:600px){
     .grid-links,
-    .skills-grid {
+    .skills-grid,
+    .projects-grid {
         grid-template-columns: 1fr;
     }
 }
@@ -234,75 +253,194 @@ h1 { font-size: 26px; font-weight: 800; color: var(--dark); }
 </head>
 
 <body>
-
 <div class="bg-circle"></div>
 
 <div class="card">
 
-<div class="thumb-box">
-    <img src="https://i.ibb.co.com/2YcsPyJ6/profile.jpg" alt="Muhamad Holis" class="profile-img">
-</div>
+    <div class="thumb-box">
+        <img src="https://i.ibb.co.com/2YcsPyJ6/profile.jpg" alt="Muhamad Holis" class="profile-img">
+    </div>
 
-<h1>Muhamad Holis</h1>
-<span class="badge">Fullstack Developer | Author | Marketing Strategy</span>
+    <h1>Muhamad Holis</h1>
+    <span class="badge">Fullstack Developer | Author | Marketing Strategy</span>
     <p class="bio">Turning complex problems into elegant mobile solutions.</p>
 
-<div class="grid-links">
-    <a href="https://lynk.id/konten_digital/5vdedrw4g86m" class="link-item"><span>📖</span><strong>E-Book</strong><small>10 Trik Jualan</small></a>
-    <a href="https://open.spotify.com/artist/4BVmivSLp28WDmI03ettVV?si=bQUfvBy_TR6fRoh8s6a3zQ" class="link-item"><span>🎵</span><strong>Music</strong><small>Dengarkan di Spotify</small></a>
-    <a href="https://islamicdigitalapp.blogspot.com/2026/02/aplikasi-alquran-mobile-pro-gratis.html?m=1" class="link-item"><span>💻</span><strong>Apps</strong><small>Portfolio Dev</small></a>
-    <a href="https://design-indra.github.io/portofolio/" class="link-item"><span>📈</span><strong>Sales</strong><small>Marketing Strategy</small></a>
-   
+    <div class="grid-links">
+        <a href="https://lynk.id/konten_digital/5vdedrw4g86m" class="link-item"><span>📖</span><strong>E-Book</strong><small>10 Trik Jualan</small></a>
+        <a href="https://open.spotify.com/artist/4BVmivSLp28WDmI03ettVV?si=bQUfvBy_TR6fRoh8s6a3zQ" class="link-item"><span>🎵</span><strong>Music</strong><small>Dengarkan di Spotify</small></a>
+        <a href="https://islamicdigitalapp.blogspot.com/2026/02/aplikasi-alquran-mobile-pro-gratis.html?m=1" class="link-item"><span>💻</span><strong>Apps</strong><small>Portfolio Dev</small></a>
+        <a href="https://design-indra.github.io/portofolio/" class="link-item"><span>📈</span><strong>Sales</strong><small>Marketing Strategy</small></a>
+    </div>
 
-<div class="section">
-<div class="section-title">Karya Kreatif & Produk</div>
+    <!-- ===== SECTION PROJEK WEB ===== -->
+    <div class="section">
+        <div class="section-title">
+            🌐 Aplikasi & Situs Web
+            <span class="projects-count">11 Projek</span>
+        </div>
+        <div class="projects-grid">
 
-<div class="info-card">
-<h3>📖 E-Book: Strategi Jualan Online</h3>
-<p>Mengupas rahasia 10 trik jualan online yang mudah diterapkan untuk meningkatkan omzet secara signifikan.</p>
-<div class="tag-group">
-<span class="tag">Marketing</span>
-<span class="tag">Sales Trick</span>
-<span class="tag">Digital Business</span>
-</div>
-</div>
+            <a href="https://snapsave-app.vercel.app" target="_blank" class="project-card">
+                <div class="project-icon" style="background:#eef2ff;">
+                    <i class="fa-brands fa-tiktok" style="color:#6366f1;"></i>
+                </div>
+                <div class="project-info">
+                    <strong>SnapSave</strong>
+                    <small>TikTok Downloader</small>
+                </div>
+            </a>
 
-<div class="info-card">
-<h3>🎵 Single Lagu: "Selalu Ada"</h3>
-<p>Karya musik orisinal dengan lirik emosional dan aransemen menyentuh sisi humanis pendengar.</p>
-<div class="tag-group">
-<span class="tag">Songwriting</span>
-<span class="tag">Creative Arts</span>
-<span class="tag">Music Production</span>
-</div>
-</div>
-</div>
+            <a href="https://instasave-app.vercel.app" target="_blank" class="project-card">
+                <div class="project-icon" style="background:#fdf2f8;">
+                    <i class="fa-brands fa-instagram" style="color:#ec4899;"></i>
+                </div>
+                <div class="project-info">
+                    <strong>InstaSave</strong>
+                    <small>Instagram Downloader</small>
+                </div>
+            </a>
 
-<div class="section">
-<div class="section-title">Keahlian Pemrograman</div>
-<div class="skills-grid">
-<div class="skill-box"><strong>Mobile Development</strong><span>Android, iOS, Flutter</span></div>
-<div class="skill-box"><strong>Backend & API</strong><span>Node.js, Firebase, REST API</span></div>
-<div class="skill-box"><strong>Marketing Tech</strong><span>SEO, Ads, Funnel Strategy</span></div>
-<div class="skill-box"><strong>Software Engineering</strong><span>Clean & Scalable Architecture</span></div>
-</div>
-</div>
+            <a href="https://ytsave-app.vercel.app" target="_blank" class="project-card">
+                <div class="project-icon" style="background:#fef2f2;">
+                    <i class="fa-brands fa-youtube" style="color:#ef4444;"></i>
+                </div>
+                <div class="project-info">
+                    <strong>YTSave</strong>
+                    <small>YouTube + MP3</small>
+                </div>
+            </a>
 
-<div class="section">
-<div class="section-title">Hubungi Saya</div>
-<p style="font-size:14px; color:var(--slate);">
-Tersedia untuk proyek inovatif, pengembangan aplikasi custom, atau konsultasi strategi marketing.
-</p>
-<div class="cta-group">
-<a href="https://wa.me/6283803888990" class="btn btn-dark">Chat via WhatsApp</a>
-<a href="mailto:mholis1991holis@gmail.com" class="btn btn-outline">Kirim Email Bisnis</a>
-</div>
-</div>
-<div class="disclaimer">
-<strong>Disclaimer:</strong> Profil ini adalah portofolio resmi Muhamad Holis. Hak cipta buku, lagu, dan kode aplikasi dilindungi.
-</div>
+            <a href="https://fbsave-apps.vercel.app" target="_blank" class="project-card">
+                <div class="project-icon" style="background:#eff6ff;">
+                    <i class="fa-brands fa-facebook" style="color:#1877f2;"></i>
+                </div>
+                <div class="project-info">
+                    <strong>FBSave</strong>
+                    <small>Facebook Downloader</small>
+                </div>
+            </a>
+
+            <a href="https://pinsave-bay.vercel.app" target="_blank" class="project-card">
+                <div class="project-icon" style="background:#fff1f2;">
+                    <i class="fa-brands fa-pinterest" style="color:#e60023;"></i>
+                </div>
+                <div class="project-info">
+                    <strong>PinSave</strong>
+                    <small>Pinterest Downloader</small>
+                </div>
+            </a>
+
+            <a href="https://qrcode-apps.vercel.app" target="_blank" class="project-card">
+                <div class="project-icon" style="background:#f5f3ff;">
+                    <i class="fa-solid fa-qrcode" style="color:#7c3aed;"></i>
+                </div>
+                <div class="project-info">
+                    <strong>QRSave</strong>
+                    <small>QR Code Generator</small>
+                </div>
+            </a>
+
+            <a href="https://bgremove-apps.vercel.app" target="_blank" class="project-card">
+                <div class="project-icon" style="background:#f0fdf4;">
+                    <i class="fa-solid fa-scissors" style="color:#16a34a;"></i>
+                </div>
+                <div class="project-info">
+                    <strong>RemoveBG</strong>
+                    <small>Hapus Background</small>
+                </div>
+            </a>
+
+            <a href="https://ttspeech-apps.vercel.app" target="_blank" class="project-card">
+                <div class="project-icon" style="background:#f0f9ff;">
+                    <i class="fa-solid fa-volume-high" style="color:#0284c7;"></i>
+                </div>
+                <div class="project-info">
+                    <strong>TextToSpeech</strong>
+                    <small>Teks ke Suara MP3</small>
+                </div>
+            </a>
+
+            <a href="https://pdftools-app.vercel.app" target="_blank" class="project-card">
+                <div class="project-icon" style="background:#fef2f2;">
+                    <i class="fa-solid fa-file-pdf" style="color:#dc2626;"></i>
+                </div>
+                <div class="project-info">
+                    <strong>PDFTools</strong>
+                    <small>Merge, Split, Compress PDF</small>
+                </div>
+            </a>
+
+            <a href="https://imgsizelite.vercel.app" target="_blank" class="project-card">
+                <div class="project-icon" style="background:#fffbeb;">
+                    <i class="fa-solid fa-compress" style="color:#d97706;"></i>
+                </div>
+                <div class="project-info">
+                    <strong>CompressImg</strong>
+                    <small>Kompres Gambar Online</small>
+                </div>
+            </a>
+
+            <a href="https://short-you.vercel.app" target="_blank" class="project-card">
+                <div class="project-icon" style="background:#faf5ff;">
+                    <i class="fa-solid fa-link" style="color:#9333ea;"></i>
+                </div>
+                <div class="project-info">
+                    <strong>LinkShort</strong>
+                    <small>URL Shortener Gratis</small>
+                </div>
+            </a>
+
+        </div>
+    </div>
+    <!-- ===== END PROJEK WEB ===== -->
+
+    <div class="section">
+        <div class="section-title">Karya Kreatif & Produk</div>
+        <div class="info-card">
+            <h3>📖 E-Book: Strategi Jualan Online</h3>
+            <p>Mengupas rahasia 10 trik jualan online yang mudah diterapkan untuk meningkatkan omzet secara signifikan.</p>
+            <div class="tag-group">
+                <span class="tag">Marketing</span>
+                <span class="tag">Sales Trick</span>
+                <span class="tag">Digital Business</span>
+            </div>
+        </div>
+        <div class="info-card">
+            <h3>🎵 Single Lagu: "Selalu Ada"</h3>
+            <p>Karya musik orisinal dengan lirik emosional dan aransemen menyentuh sisi humanis pendengar.</p>
+            <div class="tag-group">
+                <span class="tag">Songwriting</span>
+                <span class="tag">Creative Arts</span>
+                <span class="tag">Music Production</span>
+            </div>
+        </div>
+    </div>
+
+    <div class="section">
+        <div class="section-title">Keahlian Pemrograman</div>
+        <div class="skills-grid">
+            <div class="skill-box"><strong>Mobile Development</strong><span>Android, iOS, Flutter</span></div>
+            <div class="skill-box"><strong>Backend & API</strong><span>Node.js, Firebase, REST API</span></div>
+            <div class="skill-box"><strong>Marketing Tech</strong><span>SEO, Ads, Funnel Strategy</span></div>
+            <div class="skill-box"><strong>Software Engineering</strong><span>Clean & Scalable Architecture</span></div>
+        </div>
+    </div>
+
+    <div class="section">
+        <div class="section-title">Hubungi Saya</div>
+        <p style="font-size:14px; color:var(--slate);">
+            Tersedia untuk proyek inovatif, pengembangan aplikasi custom, atau konsultasi strategi marketing.
+        </p>
+        <div class="cta-group">
+            <a href="https://wa.me/6283803888990" class="btn btn-dark">Chat via WhatsApp</a>
+            <a href="mailto:mholis1991holis@gmail.com" class="btn btn-outline">Kirim Email Bisnis</a>
+        </div>
+    </div>
+
+    <div class="disclaimer">
+        <strong>Disclaimer:</strong> Profil ini adalah portofolio resmi Muhamad Holis. Hak cipta buku, lagu, dan kode aplikasi dilindungi.
+    </div>
 
 </div>
-
 </body>
 </html>
